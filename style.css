@@ -1,0 +1,881 @@
+/* =====================================
+   EXPENSE & BUDGET VISUALIZER
+   CSS
+===================================== */
+
+
+/* =====================================
+   VARIABLES
+===================================== */
+
+:root {
+
+    --bg: #f5f7fb;
+
+    --card: #ffffff;
+
+    --text: #172033;
+
+    --muted: #6b7280;
+
+    --border: #e5e7eb;
+
+    --blue: #2563eb;
+
+    --blue-hover: #1d4ed8;
+
+    --red: #ef4444;
+
+    --red-hover: #dc2626;
+
+    --food: #3b82f6;
+
+    --transport: #f59e0b;
+
+    --fun: #8b5cf6;
+
+    --shadow:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+
+}
+
+
+/* =====================================
+   DARK MODE
+===================================== */
+
+body.dark {
+
+    --bg: #0f172a;
+
+    --card: #1e293b;
+
+    --text: #f8fafc;
+
+    --muted: #94a3b8;
+
+    --border: #334155;
+
+    --shadow:
+        0 8px 25px rgba(0, 0, 0, 0.25);
+
+}
+
+
+/* =====================================
+   RESET
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    transition:
+        background 0.3s,
+        color 0.3s;
+
+}
+
+
+/* =====================================
+   NAVBAR
+===================================== */
+
+.navbar {
+
+    width: 100%;
+
+    min-height: 68px;
+
+    padding: 0 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: var(--card);
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+
+.logo {
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+}
+
+
+.theme-btn {
+
+    width: 42px;
+
+    height: 42px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: var(--card);
+
+    color: var(--text);
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+}
+
+
+/* =====================================
+   MAIN
+===================================== */
+
+.container {
+
+    width: min(1100px, 92%);
+
+    margin: auto;
+
+    padding: 30px 0 50px;
+
+}
+
+
+/* =====================================
+   BALANCE CARD
+===================================== */
+
+.balance-card {
+
+    margin-bottom: 24px;
+
+    padding: 30px;
+
+    min-height: 175px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: var(--card);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.small-title {
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+
+}
+
+
+#totalBalance {
+
+    font-size: 42px;
+
+    font-weight: 800;
+
+}
+
+
+#totalBalance.warning {
+
+    color: var(--red);
+
+}
+
+
+.description {
+
+    margin-top: 8px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+}
+
+
+.money-icon {
+
+    width: 60px;
+
+    height: 60px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 16px;
+
+    background: #eff6ff;
+
+    font-size: 28px;
+
+}
+
+
+/* =====================================
+   CARD
+===================================== */
+
+.card {
+
+    margin-bottom: 24px;
+
+    padding: 26px;
+
+    background: var(--card);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    box-shadow: var(--shadow);
+
+}
+
+
+/* =====================================
+   HEADINGS
+===================================== */
+
+.section-heading {
+
+    margin-bottom: 22px;
+
+}
+
+
+.section-heading h2,
+.section-header h2 {
+
+    margin-bottom: 5px;
+
+    font-size: 20px;
+
+}
+
+
+.section-heading p,
+.section-header p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================
+   FORM
+===================================== */
+
+#transactionForm {
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 1fr 1fr auto;
+
+    gap: 15px;
+
+    align-items: end;
+
+}
+
+
+.form-control {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+.form-control label {
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+.form-control input,
+.form-control select {
+
+    width: 100%;
+
+    height: 46px;
+
+    padding: 0 13px;
+
+    background: var(--card);
+
+    color: var(--text);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 14px;
+
+}
+
+
+.form-control input:focus,
+.form-control select:focus {
+
+    border-color: var(--blue);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, 0.12);
+
+}
+
+
+/* =====================================
+   ADD BUTTON
+===================================== */
+
+.add-btn {
+
+    height: 46px;
+
+    padding: 0 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: var(--blue);
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+.add-btn:hover {
+
+    background: var(--blue-hover);
+
+}
+
+
+/* =====================================
+   BOTTOM GRID
+===================================== */
+
+.bottom-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1.15fr 0.85fr;
+
+    gap: 24px;
+
+    align-items: start;
+
+}
+
+
+/* =====================================
+   SECTION HEADER
+===================================== */
+
+.section-header {
+
+    margin-bottom: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+}
+
+
+/* =====================================
+   SORT
+===================================== */
+
+.sort-btn {
+
+    padding: 9px 12px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 9px;
+
+    background: var(--card);
+
+    color: var(--text);
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+}
+
+
+.sort-btn:hover {
+
+    border-color: var(--blue);
+
+    color: var(--blue);
+
+}
+
+
+/* =====================================
+   TRANSACTION LIST
+===================================== */
+
+.transaction-list {
+
+    max-height: 420px;
+
+    overflow-y: auto;
+
+}
+
+
+.transaction-item {
+
+    min-height: 70px;
+
+    padding: 13px 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+
+.transaction-name {
+
+    margin-bottom: 6px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+
+.transaction-category {
+
+    display: inline-block;
+
+    padding: 4px 9px;
+
+    border-radius: 20px;
+
+    background: #f1f5f9;
+
+    color: #64748b;
+
+    font-size: 11px;
+
+}
+
+
+.transaction-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.transaction-amount {
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+}
+
+
+.delete-btn {
+
+    padding: 7px 10px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: var(--red);
+
+    color: white;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+}
+
+
+.delete-btn:hover {
+
+    background: var(--red-hover);
+
+}
+
+
+/* =====================================
+   EMPTY STATE
+===================================== */
+
+.empty-state {
+
+    min-height: 220px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: var(--muted);
+
+}
+
+
+.empty-icon {
+
+    margin-bottom: 10px;
+
+    font-size: 38px;
+
+}
+
+
+.empty-state strong {
+
+    color: var(--text);
+
+}
+
+
+.empty-state p {
+
+    margin-top: 5px;
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================
+   CHART
+===================================== */
+
+.chart-card {
+
+    min-height: 420px;
+
+}
+
+
+.chart-box {
+
+    width: 100%;
+
+    height: 280px;
+
+    position: relative;
+
+}
+
+
+/* =====================================
+   LEGEND
+===================================== */
+
+.legend {
+
+    margin-top: 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+}
+
+
+.dot {
+
+    display: inline-block;
+
+    width: 9px;
+
+    height: 9px;
+
+    margin-right: 5px;
+
+    border-radius: 50%;
+
+}
+
+
+.food {
+    background: var(--food);
+}
+
+
+.transport {
+    background: var(--transport);
+}
+
+
+.fun {
+    background: var(--fun);
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 900px) {
+
+    #transactionForm {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .add-btn {
+
+        width: 100%;
+
+    }
+
+
+    .bottom-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+    .navbar {
+
+        min-height: 60px;
+
+        padding: 0 4%;
+
+    }
+
+
+    .logo {
+
+        font-size: 17px;
+
+    }
+
+
+    .container {
+
+        width: 94%;
+
+        padding-top: 20px;
+
+    }
+
+
+    .balance-card {
+
+        padding: 22px;
+
+        min-height: 145px;
+
+    }
+
+
+    #totalBalance {
+
+        font-size: 34px;
+
+    }
+
+
+    .money-icon {
+
+        width: 50px;
+
+        height: 50px;
+
+        font-size: 22px;
+
+    }
+
+
+    .card {
+
+        padding: 20px;
+
+    }
+
+
+    #transactionForm {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .section-header {
+
+        align-items: flex-start;
+
+    }
+
+
+    .transaction-item {
+
+        align-items: flex-start;
+
+    }
+
+
+    .transaction-right {
+
+        flex-direction: column;
+
+        align-items: flex-end;
+
+        gap: 7px;
+
+    }
+
+
+    .chart-box {
+
+        height: 250px;
+
+    }
+
+}
+/* =====================================
+   DELETE BUTTON
+===================================== */
+
+.delete-btn {
+    border: none;
+    background: #ef4444;
+    color: white;
+
+    padding: 8px 12px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+    transform: translateY(-1px);
+}
+
+.delete-btn:active {
+    transform: scale(0.96);
+          }
